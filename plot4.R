@@ -13,7 +13,7 @@ data$DateTime <- paste(data$Date, data$Time, sep=" ")
 data$DateTime <- dmy_hms(data$DateTime)
 
 # create a PNG file
-png(file="plot4.png",width=480,height=480,res=80)
+png(file="plot4.png",width=480,height=480,res=70)
 
 # Specify that we want two rows and two columns of plots
 par(mfrow=c(2,2))
@@ -35,7 +35,7 @@ lines(data$DateTime, data$Sub_metering_2, type="l", col="red")
 lines(data$DateTime, data$Sub_metering_3, type="l", col="blue")
 # bty="n" removes the box around the legend
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-       col=c("black", "red", "blue"), cex=0.8, lty=1, bty="n")
+       col=c("black", "red", "blue"), cex=1, lty=1, bty="n")
 
 # Draw the bottom right plot, Global_reactive_power
 plot(data$DateTime, data$Global_reactive_power, type="n", xlab="datetime",
